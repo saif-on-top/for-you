@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার প্রিয়তমার জন্য চিঠি ❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        button {
+            background-color: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #ff416c;
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Page 1 -->
+        <div id="page1">
+            <h2>✉️ তোমার জন্য একটি চিঠি...</h2>
+            <p>আজ বিশ্ব চিঠি দিবস! ডিজিটাল এই যুগে কলম আর কাগজের দরকার নেই, আমার প্রতিটি অনুভূতির ঠিকানা তো কেবল তুমি। চিঠিটা কি খুলে দেখতে চাও?</p>
+            <div class="btn-container">
+                <button onclick="nextPage(2)">হ্যাঁ, পড়তে চাই! ❤️</button>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" class="hidden">
+            <h2>🌸 প্রিয়তমা,</h2>
+            <p>প্রতিটা দিন তোমার সাথে শুরু হওয়া এবং তোমাতেই শেষ হওয়া আমার জীবনের সবচেয়ে সুন্দর অংশ। তোমার ওই মিষ্টি হাসিটুকু আমার পুরো পৃথিবী উজ্জ্বল করে দেয়।</p>
+            <div class="btn-container">
+                <button onclick="nextPage(3)">তারপর? ✨</button>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" class="hidden">
+            <h2>💭 একটি ছোট প্রশ্ন...</h2>
+            <p>আজকের এই বিশেষ দিনে তোমার কাছে জানতে ইচ্ছা করছে— তুমিও কি আমাকে ততটাই ভালোবাসো, যতটা আমি তোমায় বাসি?</p>
+            <div class="btn-container">
+                <button onclick="nextPage(4)">হ্যাঁ, অনেক ভালোবাসি! 💖</button>
+                <button class="btn-secondary" onclick="alert('না বলার কোনো সুযোগ নেই কিন্তু! 😜')">হুমম... ভাবছি 🤔</button>
+            </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div id="page4" class="hidden">
+            <h2>🌹 শেষ কথা...</h2>
+            <p>দূরত্ব যাই থাক, সময় যেভাবে কাটুক— আমার ভালোবাসা সবসময় একই থাকবে। শুভ চিঠি দিবস, আমার ভালোবাসার মানুষ!</p>
+            <div class="btn-container">
+                <button onclick="nextPage(1)">আবার প্রথম থেকে পড়ো 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(pageNumber) {
+            // Hide all pages
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById('page' + i).classList.add('hidden');
+            }
+            // Show requested page
+            document.getElementById('page' + pageNumber).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
