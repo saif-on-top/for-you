@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>আমার প্রিয়তমার জন্য চিঠি ❤️</title>
+    <title>দোস্তদের জন্য চিঠি ✉️</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,46 +23,54 @@
             background: white;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 480px;
             width: 100%;
             text-align: center;
-            transition: all 0.3s ease;
         }
         h2 {
-            color: #d63384;
+            color: #1e3c72;
             margin-bottom: 15px;
         }
         p {
-            color: #555;
-            font-size: 1.1rem;
+            color: #444;
+            font-size: 1.05rem;
             line-height: 1.6;
             margin-bottom: 25px;
         }
         .btn-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         button {
-            background-color: #ff4b2b;
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 12px 20px;
             border-radius: 25px;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            font-weight: bold;
             cursor: pointer;
             transition: 0.2s;
         }
         button:hover {
-            background-color: #ff416c;
-            transform: scale(1.05);
+            background-color: #0056b3;
+            transform: scale(1.03);
         }
-        .btn-secondary {
-            background-color: #6c757d;
+        .btn-alt {
+            background-color: #28a745;
         }
-        .btn-secondary:hover {
-            background-color: #5a6268;
+        .btn-alt:hover {
+            background-color: #218838;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800;
         }
         .hidden {
             display: none;
@@ -72,51 +80,59 @@
 <body>
 
     <div class="card">
-        <!-- Page 1 -->
+        <!-- Page 1: Intro -->
         <div id="page1">
-            <h2>✉️ তোমার জন্য একটি চিঠি...</h2>
-            <p>আজ বিশ্ব চিঠি দিবস! ডিজিটাল এই যুগে কলম আর কাগজের দরকার নেই, আমার প্রতিটি অনুভূতির ঠিকানা তো কেবল তুমি। চিঠিটা কি খুলে দেখতে চাও?</p>
+            <h2>🔥 কি খবর দোস্তরা!</h2>
+            <p>চিঠি দিবসে তোরা ভাবছিলি তোদের ভুলে গেছি? আরে না! তোদের সাথে কাটানো বেঞ্চের আড্ডা আর স্মৃতিগুলো নিয়ে একটা ছোট ডিজিটাল মেসেজ। দেখবি নাকি?</p>
             <div class="btn-container">
-                <button onclick="nextPage(2)">হ্যাঁ, পড়তে চাই! ❤️</button>
+                <button onclick="nextPage(2)">চল দেখি কি আছে! 😎</button>
             </div>
         </div>
 
-        <!-- Page 2 -->
+        <!-- Page 2: Friendship Nostalgia -->
         <div id="page2" class="hidden">
-            <h2>🌸 প্রিয়তমা,</h2>
-            <p>প্রতিটা দিন তোমার সাথে শুরু হওয়া এবং তোমাতেই শেষ হওয়া আমার জীবনের সবচেয়ে সুন্দর অংশ। তোমার ওই মিষ্টি হাসিটুকু আমার পুরো পৃথিবী উজ্জ্বল করে দেয়।</p>
+            <h2>📚 ক্লাসরুম আর ব্যাকবেঞ্চ...</h2>
+            <p>ক্লাসের পেছনে বসে টিফিন চুরি করে খাওয়া, পরীক্ষার হলে রোল নম্বর মেলানো, আর স্যারের পড়া না পারলে এক একজন এক এক অজুহাত দেওয়া— তোরা না থাকলে ক্লাসটা পুরাই বোরিং হতো!</p>
             <div class="btn-container">
-                <button onclick="nextPage(3)">তারপর? ✨</button>
+                <button onclick="nextPage(3)">একদম সত্যি কথা! 😂</button>
             </div>
         </div>
 
-        <!-- Page 3 -->
+        <!-- Page 3: Funny Option Page -->
         <div id="page3" class="hidden">
-            <h2>💭 একটি ছোট প্রশ্ন...</h2>
-            <p>আজকের এই বিশেষ দিনে তোমার কাছে জানতে ইচ্ছা করছে— তুমিও কি আমাকে ততটাই ভালোবাসো, যতটা আমি তোমায় বাসি?</p>
+            <h2>🎯 একটা সত্যি কথা বল তো?</h2>
+            <p>আমাদের গ্যাংয়ের মধ্যে সবচেয়ে বড় পামবাজ / ফাঁকিবাজ কোনটা?</p>
             <div class="btn-container">
-                <button onclick="nextPage(4)">হ্যাঁ, অনেক ভালোবাসি! 💖</button>
-                <button class="btn-secondary" onclick="alert('না বলার কোনো সুযোগ নেই কিন্তু! 😜')">হুমম... ভাবছি 🤔</button>
+                <button class="btn-alt" onclick="nextPage(4)">আমি নিজে 😇</button>
+                <button class="btn-warning" onclick="alert('জানতাম তুই অন্য কারও ঘাড়ে চাপাবি! 😂'); nextPage(4);">তুই নিজে 😜</button>
             </div>
         </div>
 
-        <!-- Page 4 -->
+        <!-- Page 4: Treatment Demand -->
         <div id="page4" class="hidden">
-            <h2>🌹 শেষ কথা...</h2>
-            <p>দূরত্ব যাই থাক, সময় যেভাবে কাটুক— আমার ভালোবাসা সবসময় একই থাকবে। শুভ চিঠি দিবস, আমার ভালোবাসার মানুষ!</p>
+            <h2>🍔 ট্রিট কিন্তু বাকি!</h2>
+            <p>চিঠি দিবসে অনেক মিষ্টি কথা হলো! এবার বল, নেক্সট কোন দিন সবাই মিলে একসাথে আড্ডা আর ট্রিট দেওয়া হচ্ছে?</p>
             <div class="btn-container">
-                <button onclick="nextPage(1)">আবার প্রথম থেকে পড়ো 🔄</button>
+                <button onclick="nextPage(5)">খুব শীঘ্রই দেয়া হচ্ছে 🍕</button>
+                <button class="btn-alt" onclick="alert('টাকা নাই বললেই তো কানের নিচে এক্টামু! 🤐'); nextPage(5);">পকেটে টাকা নাই ভাই 💸</button>
+            </div>
+        </div>
+
+        <!-- Page 5: Final Message -->
+        <div id="page5" class="hidden">
+            <h2>🤝 সারাজীবন যেন এমনই থাকে...</h2>
+            <p>পড়াশোনা বা কাজের চাপে হয়তো প্রতিদিন দেখা হয় না, কিন্তু তোদের জায়গাটা সবসময় স্পেশাল। সবাই ভালো থাকিস আর আড্ডা যেন কখনো বন্ধ না হয়!</p>
+            <div class="btn-container">
+                <button onclick="nextPage(1)">আবার শুরু থেকে রিঅ্যাক্ট কর 🔄</button>
             </div>
         </div>
     </div>
 
     <script>
         function nextPage(pageNumber) {
-            // Hide all pages
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 5; i++) {
                 document.getElementById('page' + i).classList.add('hidden');
             }
-            // Show requested page
             document.getElementById('page' + pageNumber).classList.remove('hidden');
         }
     </script>
