@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জিহাদের গোপন রহস্য 🔍</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        h2 {
+            color: #11998e;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        p {
+            color: #444;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            min-height: 60px;
+        }
+        button {
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.1s ease;
+        }
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+        #yesBtn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+        .result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Question Section -->
+        <div id="quizSection">
+            <h2>🚨 সত্য প্রকাশ!</h2>
+            <p>জিহাদ কি আসলেই একজন চরম নারীলোভী?</p>
+            <div class="btn-container">
+                <button id="yesBtn" onclick="showResult()">হ্যাঁ, ১০০% সত্য! 😂</button>
+                <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">না 😇</button>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result">
+            <h2>🎉 প্রমাণ মিলে গেছে!</h2>
+            <p>জানতাম! সবাই জানে জিহাদ কেমন নারীলোভী! "না" অপশন তো তুই চাইলেও চাপতে পারবি না! 😜🤣</p>
+            <button id="yesBtn" onclick="location.reload()">আবার ট্রাই কর 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            // Calculate random positions within the window
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
+            
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+
+        function showResult() {
+            document.getElementById('quizSection').style.display = 'none';
+            document.getElementById('resultSection').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
