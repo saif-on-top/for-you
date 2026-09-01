@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের গ্যাংয়ের স্পেশাল স্কোয়াড 😎</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: #ff4b2b;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #333;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #ff416c;
+            transform: scale(1.03);
+        }
+        .btn-alt {
+            background-color: #007bff;
+        }
+        .btn-alt:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Page 1 -->
+        <div id="page1">
+            <h2>🔥 আমাদের আলটিমেট স্কোয়াড!</h2>
+            <p>আমাদের গ্যাংয়ের মহাপুরুষদের আসল রূপ দেখতে নিচে ক্লিক কর! এদের কাণ্ডকারখানা দেখলে মাথা ঘুরে যাবে...</p>
+            <div class="btn-container">
+                <button onclick="nextPage(2)">কাদের কথা বলছি দেখি? 👀</button>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" class="hidden">
+            <h2>🚨 ফ্লার্ট আর নেশার খনি!</h2>
+            <p><b>মেহেদী:</b> সারাদিন মেয়েদের পেছনে টাইপ মারা ছাড়া আর কোনো কাজ নাই!<br><br><b>সাদ:</b> ধোঁয়া ছাড়া যার দিন চলেই না, একদম পাক্কা নেশাখোর!</p>
+            <div class="btn-container">
+                <button onclick="nextPage(3)">আরও আছে... 😂</button>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" class="hidden">
+            <h2>🎭 ফকির আর প্রপোজ মাস্টার!</h2>
+            <p><b>প্রদীপ:</b> রাস্তার টোকাইদের মতো ভাব মেরে ঘোরে, পকেটে এক টাকাও থাকে না!<br><br><b>মাহাথির:</b> ছেলেদের দেখলেই যার মন গলে যায়, প্রেম করার জন্য অস্থির!</p>
+            <div class="btn-container">
+                <button class="btn-alt" onclick="nextPage(4)">নেক্সট পার্ট ➡️</button>
+            </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div id="page4" class="hidden">
+            <h2>💔 নিব্বা আর ভণ্ড বাবা!</h2>
+            <p><b>তারিকুল:</b> পিওর নিব্বা! কথায় কথায় ছ্যাঁকা খাওয়ার নাটক করে কান্নাকাটি করে।<br><br><b>নীরব:</b> সবচেয়ে বড় ভণ্ড! সামনে ভালো মানুষ সেজে থাকে কিন্তু আড়ালে সব কুকাজ করে।</p>
+            <div class="btn-container">
+                <button onclick="nextPage(5)">শেষ দুইজন বাকি ⚡</button>
+            </div>
+        </div>
+
+        <!-- Page 5 -->
+        <div id="page5" class="hidden">
+            <h2>📏 খাটো আর নজরে খরাপ!</h2>
+            <p><b>ইসরাফিল:</b> সাইজে খাটো (বাইট্টা), কিন্তু মুখের জোর সবার চেয়ে বেশি!<br><br><b>জিহাদ:</b> চরম লুচ্চা! কারোর দিকে ভালো নজরে তাকানো তার স্বভাবেই নাই!</p>
+            <div class="btn-container">
+                <button class="btn-alt" onclick="nextPage(1)">প্রথম থেকে আবার দেখো 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(pageNumber) {
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('page' + i).classList.add('hidden');
+            }
+            document.getElementById('page' + pageNumber).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
